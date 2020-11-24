@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+
+    
+    <script>
+        var myArray=[1,2,2,4,5,6,7,8,8,8]//array de 10 posiciones original
+        var valores = new Array();//instancia de array vacio
+        let indices = [...new Set(myArray)];//extraccion de valores unicos
+        let mayor=0
+
+        for (let index = 0; index < indices.length; index++) {
+        
+            valores[indices[index]]=0 // creacion del array con posiciones unicas
+            
+        }
+
+        for (let index = 0; index < myArray.length; index++) {
+            valores[myArray[index]]=valores[myArray[index]]+1;//recorrido del array principal y aumento de valores encontrados
+            
+        }
+
+        for (let index = 0; index < valores.length; index++) {
+          if(mayor< valores[index]){
+            mayor=valores[index];// buscar la moyor coincidencia
+      }  
+       
+    }
+    document.write("Longest:"+valores[valores.indexOf(mayor)]+"</br>")
+    document.write("Number:"+ valores.indexOf(mayor))
+
+        
+       
+    </script>
+</body>
+</html>

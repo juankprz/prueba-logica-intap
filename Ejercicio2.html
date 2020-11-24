@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    
+   
+   
+   <script>
+    
+    var myArray=[1,2,1,3,3,1,2,1,5,1]
+    var valores = new Array();
+     valores[1]=" "
+     valores[2]=" "
+     valores[3]=" "
+     valores[4]=" "
+     valores[5]=" "
+    for (let index = 0; index < myArray.length; index++) {
+        
+        valores[myArray[index]]=valores[myArray[index]]+"*"
+        
+    }
+      
+    for (let index = 1; index < valores.length; index++){
+       document.write(index+":" + valores[index]+"</br>")
+    
+    }
+    </script>
+</body>
+</html>
